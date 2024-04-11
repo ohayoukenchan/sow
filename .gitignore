@@ -1,0 +1,13 @@
+.DS_Store
+
+## XCodeのファイル操作を記録するためのもの
+xcuserdata/
+
+## ビルド時に生成されたファイルが保存される場所 
+build/
+DerivedData/
+
+## ipaファイル及びdSYM
+*.ipa
+*.dSYM.zip
+*.dSYM
