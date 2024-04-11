@@ -14,7 +14,15 @@
 		094EA8692BC6AAD5006B0942 /* sowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8682BC6AAD5006B0942 /* sowTests.swift */; };
 		094EA8732BC6AAD5006B0942 /* sowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8722BC6AAD5006B0942 /* sowUITests.swift */; };
 		094EA8752BC6AAD5006B0942 /* sowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8742BC6AAD5006B0942 /* sowUITestsLaunchTests.swift */; };
-		094EA8852BC6B691006B0942 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 094EA8842BC6B691006B0942 /* GoogleService-Info.plist */; };
+		099CDAB32BC7852300CB1FAC /* PresentationLib in Frameworks */ = {isa = PBXBuildFile; productRef = 099CDAB22BC7852300CB1FAC /* PresentationLib */; };
+		099CDAB52BC7867300CB1FAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099CDAB42BC7867300CB1FAC /* GoogleService-Info.plist */; };
+		099CDAB92BC787A700CB1FAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8592BC6AAD3006B0942 /* ContentView.swift */; };
+		099CDABA2BC787A700CB1FAC /* sowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8572BC6AAD3006B0942 /* sowApp.swift */; };
+		099CDABC2BC787A700CB1FAC /* PresentationLib in Frameworks */ = {isa = PBXBuildFile; productRef = 099CDAB72BC787A700CB1FAC /* PresentationLib */; };
+		099CDABE2BC787A700CB1FAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094EA85E2BC6AAD5006B0942 /* Preview Assets.xcassets */; };
+		099CDABF2BC787A700CB1FAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094EA85B2BC6AAD5006B0942 /* Assets.xcassets */; };
+		099CDAC02BC787A700CB1FAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099CDAB42BC7867300CB1FAC /* GoogleService-Info.plist */; };
+		099CDAC82BC7890800CB1FAC /* GoogleService-dev.Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099CDAC72BC7890800CB1FAC /* GoogleService-dev.Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +53,10 @@
 		094EA86E2BC6AAD5006B0942 /* sowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		094EA8722BC6AAD5006B0942 /* sowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sowUITests.swift; sourceTree = "<group>"; };
 		094EA8742BC6AAD5006B0942 /* sowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sowUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		094EA8842BC6B691006B0942 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		099CDAB12BC7816A00CB1FAC /* Packages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Packages; path = sow/Packages; sourceTree = "<group>"; };
+		099CDAB42BC7867300CB1FAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		099CDAC42BC787A700CB1FAC /* sow-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sow-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		099CDAC72BC7890800CB1FAC /* GoogleService-dev.Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-dev.Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				099CDAB32BC7852300CB1FAC /* PresentationLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +79,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		099CDABB2BC787A700CB1FAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099CDABC2BC787A700CB1FAC /* PresentationLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +118,7 @@
 				094EA8542BC6AAD3006B0942 /* sow.app */,
 				094EA8642BC6AAD5006B0942 /* sowTests.xctest */,
 				094EA86E2BC6AAD5006B0942 /* sowUITests.xctest */,
+				099CDAC42BC787A700CB1FAC /* sow-dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,7 +171,8 @@
 		094EA8832BC6B67C006B0942 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
-				094EA8842BC6B691006B0942 /* GoogleService-Info.plist */,
+				099CDAC72BC7890800CB1FAC /* GoogleService-dev.Info.plist */,
+				099CDAB42BC7867300CB1FAC /* GoogleService-Info.plist */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -173,6 +194,7 @@
 			);
 			name = sow;
 			packageProductDependencies = (
+				099CDAB22BC7852300CB1FAC /* PresentationLib */,
 			);
 			productName = sow;
 			productReference = 094EA8542BC6AAD3006B0942 /* sow.app */;
@@ -214,6 +236,26 @@
 			productReference = 094EA86E2BC6AAD5006B0942 /* sowUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		099CDAB62BC787A700CB1FAC /* sow-dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 099CDAC12BC787A700CB1FAC /* Build configuration list for PBXNativeTarget "sow-dev" */;
+			buildPhases = (
+				099CDAB82BC787A700CB1FAC /* Sources */,
+				099CDABB2BC787A700CB1FAC /* Frameworks */,
+				099CDABD2BC787A700CB1FAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sow-dev";
+			packageProductDependencies = (
+				099CDAB72BC787A700CB1FAC /* PresentationLib */,
+			);
+			productName = sow;
+			productReference = 099CDAC42BC787A700CB1FAC /* sow-dev.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -253,6 +295,7 @@
 				094EA8532BC6AAD3006B0942 /* sow */,
 				094EA8632BC6AAD5006B0942 /* sowTests */,
 				094EA86D2BC6AAD5006B0942 /* sowUITests */,
+				099CDAB62BC787A700CB1FAC /* sow-dev */,
 			);
 		};
 /* End PBXProject section */
@@ -262,9 +305,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				099CDAC82BC7890800CB1FAC /* GoogleService-dev.Info.plist in Resources */,
 				094EA85F2BC6AAD5006B0942 /* Preview Assets.xcassets in Resources */,
 				094EA85C2BC6AAD5006B0942 /* Assets.xcassets in Resources */,
-				094EA8852BC6B691006B0942 /* GoogleService-Info.plist in Resources */,
+				099CDAB52BC7867300CB1FAC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +323,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		099CDABD2BC787A700CB1FAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099CDABE2BC787A700CB1FAC /* Preview Assets.xcassets in Resources */,
+				099CDABF2BC787A700CB1FAC /* Assets.xcassets in Resources */,
+				099CDAC02BC787A700CB1FAC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +362,15 @@
 			files = (
 				094EA8732BC6AAD5006B0942 /* sowUITests.swift in Sources */,
 				094EA8752BC6AAD5006B0942 /* sowUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		099CDAB82BC787A700CB1FAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099CDAB92BC787A700CB1FAC /* ContentView.swift in Sources */,
+				099CDABA2BC787A700CB1FAC /* sowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +643,64 @@
 			};
 			name = Release;
 		};
+		099CDAC22BC787A700CB1FAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"sow/Preview Content\"";
+				DEVELOPMENT_TEAM = L248HZDU6R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ohayoukenchan.sow.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		099CDAC32BC787A700CB1FAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"sow/Preview Content\"";
+				DEVELOPMENT_TEAM = L248HZDU6R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ohayoukenchan.sow.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -619,7 +740,27 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		099CDAC12BC787A700CB1FAC /* Build configuration list for PBXNativeTarget "sow-dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				099CDAC22BC787A700CB1FAC /* Debug */,
+				099CDAC32BC787A700CB1FAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		099CDAB22BC7852300CB1FAC /* PresentationLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PresentationLib;
+		};
+		099CDAB72BC787A700CB1FAC /* PresentationLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PresentationLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 094EA84C2BC6AAD3006B0942 /* Project object */;
 }
