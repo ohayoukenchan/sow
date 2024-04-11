@@ -1,10 +1,3 @@
-//
-//  wonderUITestsLaunchTests.swift
-//  wonderUITests
-//
-//  Created by ohayoukenchan on 2024/04/10.
-//
-
 import XCTest
 
 final class wonderUITestsLaunchTests: XCTestCase {

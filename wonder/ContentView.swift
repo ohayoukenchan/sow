@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  wonder
-//
-//  Created by ohayoukenchan on 2024/04/10.
-//
-
 import SwiftUI
 
 struct ContentView: View {

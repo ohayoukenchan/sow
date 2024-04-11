@@ -1,10 +1,3 @@
-//
-//  wonderTests.swift
-//  wonderTests
-//
-//  Created by ohayoukenchan on 2024/04/10.
-//
-
 import XCTest
 @testable import wonder
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091E02F02BC76FD7007571C5 /* PresentationLib in Frameworks */ = {isa = PBXBuildFile; productRef = 091E02EF2BC76FD7007571C5 /* PresentationLib */; };
 		094EA8582BC6AAD3006B0942 /* wonderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8572BC6AAD3006B0942 /* wonderApp.swift */; };
 		094EA85A2BC6AAD3006B0942 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8592BC6AAD3006B0942 /* ContentView.swift */; };
 		094EA85C2BC6AAD5006B0942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094EA85B2BC6AAD5006B0942 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 		094EA8692BC6AAD5006B0942 /* wonderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8682BC6AAD5006B0942 /* wonderTests.swift */; };
 		094EA8732BC6AAD5006B0942 /* wonderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8722BC6AAD5006B0942 /* wonderUITests.swift */; };
 		094EA8752BC6AAD5006B0942 /* wonderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8742BC6AAD5006B0942 /* wonderUITestsLaunchTests.swift */; };
+		094EA8852BC6B691006B0942 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 094EA8842BC6B691006B0942 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		094EA86E2BC6AAD5006B0942 /* wonderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wonderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		094EA8722BC6AAD5006B0942 /* wonderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wonderUITests.swift; sourceTree = "<group>"; };
 		094EA8742BC6AAD5006B0942 /* wonderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wonderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		094EA8812BC6AB45006B0942 /* Packages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Packages; path = wonder/Packages; sourceTree = "<group>"; };
+		094EA8842BC6B691006B0942 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				091E02F02BC76FD7007571C5 /* PresentationLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,13 +76,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		091E02EE2BC76FD7007571C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		094EA84B2BC6AAD3006B0942 = {
 			isa = PBXGroup;
 			children = (
+				094EA8812BC6AB45006B0942 /* Packages */,
 				094EA8562BC6AAD3006B0942 /* wonder */,
 				094EA8672BC6AAD5006B0942 /* wonderTests */,
 				094EA8712BC6AAD5006B0942 /* wonderUITests */,
 				094EA8552BC6AAD3006B0942 /* Products */,
+				091E02EE2BC76FD7007571C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +111,7 @@
 				094EA8572BC6AAD3006B0942 /* wonderApp.swift */,
 				094EA8592BC6AAD3006B0942 /* ContentView.swift */,
 				094EA85B2BC6AAD5006B0942 /* Assets.xcassets */,
+				094EA8822BC6B66C006B0942 /* Resources */,
 				094EA85D2BC6AAD5006B0942 /* Preview Content */,
 			);
 			path = wonder;
@@ -127,6 +142,22 @@
 			path = wonderUITests;
 			sourceTree = "<group>";
 		};
+		094EA8822BC6B66C006B0942 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				094EA8832BC6B67C006B0942 /* Plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		094EA8832BC6B67C006B0942 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				094EA8842BC6B691006B0942 /* GoogleService-Info.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +174,9 @@
 			dependencies = (
 			);
 			name = wonder;
+			packageProductDependencies = (
+				091E02EF2BC76FD7007571C5 /* PresentationLib */,
+			);
 			productName = wonder;
 			productReference = 094EA8542BC6AAD3006B0942 /* wonder.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +267,7 @@
 			files = (
 				094EA85F2BC6AAD5006B0942 /* Preview Assets.xcassets in Resources */,
 				094EA85C2BC6AAD5006B0942 /* Assets.xcassets in Resources */,
+				094EA8852BC6B691006B0942 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +623,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		091E02EF2BC76FD7007571C5 /* PresentationLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PresentationLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 094EA84C2BC6AAD3006B0942 /* Project object */;
 }
