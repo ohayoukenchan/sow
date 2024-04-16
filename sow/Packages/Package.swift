@@ -36,14 +36,14 @@ let package = Package(
         .package(url: "https://github.com/realm/realm-swift.git", exact: "10.49.1"),
         .package(url: "https://github.com/apple/swift-algorithms.git", exact: "1.2.0"),
         .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI.git", exact: "3.0.1"),
-        .package(url: "https://github.com/firebase/firebase-ios-sdk", exact: "10.24.0")
+        .package(url: "https://github.com/firebase/firebase-ios-sdk", exact: "10.24.0"),
     ],
     targets: [
         .target(
             name: "Core",
             dependencies: [
                 .realm,
-                .realmSwift
+                .realmSwift,
             ]
         ),
         .target(

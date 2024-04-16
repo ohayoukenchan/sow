@@ -1,0 +1,19 @@
+@startuml
+hide circle
+
+class notes {
+  * id: int unsigned <<generated>>
+  --
+  * title varchar
+  * description varchar
+  * theme_id int unsigned <<FK>>
+  * user_id int unsigned <<FK>>
+}
+
+!include themes.pu
+themes ||..o| notes
+note top of notes
+ACL: noteは紐づいているuserしか取得することはできない
+end note
+
+@enduml
