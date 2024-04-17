@@ -14,4 +14,3 @@ public final class AppearanceUtil {
             .tintColor = .sow.monotone1
     }
 }
-

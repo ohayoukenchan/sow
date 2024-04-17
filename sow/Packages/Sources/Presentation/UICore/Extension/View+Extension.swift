@@ -4,7 +4,7 @@ import SwiftUI
 // Viewにブロックで指定したモディファイアをつけてViewとして返すのでSwiftUIのチェインを崩さないですむ
 extension View {
     @ViewBuilder
-    func `if`<Content: View>(_ condition: Bool, content: (Self) -> Content) -> some View {
+    func `if`(_ condition: Bool, content: (Self) -> some View) -> some View {
         if condition {
             content(self)
         } else {

@@ -4,7 +4,6 @@ import Foundation
 
 @MainActor
 public final class MockAPIService: ApiService {
-
     var stubs: [Any] = []
     var request: (any ApiRequest)?
 
@@ -20,7 +19,7 @@ public final class MockAPIService: ApiService {
     }
 
     public func call<Request>(from request: Request) async throws -> Request.Response
-    where Request: ApiRequest {
+        where Request: ApiRequest {
         let stubRequest = await getStubRequest(from: request)
 
         guard let stubRequest else {
@@ -30,7 +29,7 @@ public final class MockAPIService: ApiService {
         do {
             self.request = request
             return try stubRequest(request)
-        } catch let error {
+        } catch {
             throw error
         }
     }
@@ -49,13 +48,12 @@ public final class MockAPIService: ApiService {
     }
 
     public func call<Request>(from request: Request, maxRetries: Int, retryDelay: UInt64) async throws
-        -> Request.Response where Request: Infra.ApiRequest
-    {
+        -> Request.Response where Request: Infra.ApiRequest {
         var errorResponse: Error?
         for _ in 0..<maxRetries {
             do {
                 return try await call(from: request)
-            } catch let error {
+            } catch {
                 errorResponse = error
                 // エラーコードが返ってきているときはリトライしない
                 if error.primaryError?.code != nil {
@@ -73,4 +71,3 @@ public final class MockAPIService: ApiService {
         throw errorResponse ?? ApiError(code: 101, message: "APIクライアントのretry処理で不明なエラーが発生しました。")
     }
 }
-

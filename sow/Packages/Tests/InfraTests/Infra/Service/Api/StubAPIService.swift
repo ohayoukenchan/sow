@@ -15,13 +15,13 @@ protocol StubInjection {
 extension StubInjection {
     func injectingToMockURLProtocol(using data: Data?) {
         MockURLProtocol.requestHandler = { _ in
-            return (HTTPURLResponse(), data)
+            (HTTPURLResponse(), data)
         }
     }
 
     func injectingToMockURLProtocol(using data: Data?, statusCode: Int) {
         MockURLProtocol.requestHandler = { _ in
-            return (
+            (
                 HTTPURLResponse(
                     url: URL(string: "http://example.com")!,
                     statusCode: statusCode,
@@ -34,7 +34,6 @@ extension StubInjection {
 }
 
 final class StubAPIService: ApiService, StubInjection {
-
     let urlSession: URLSession
 
     init() {
@@ -44,18 +43,18 @@ final class StubAPIService: ApiService, StubInjection {
     }
 
     func call<Request>(from request: Request) async throws -> Request.Response
-    where Request: ApiRequest {
+        where Request: ApiRequest {
         let urlRequest: URLRequest = request.buildRequest()
 
         return try await withCheckedThrowingContinuation { continuation in
             let task = urlSession.dataTask(with: urlRequest) {
                 data,
-                response,
-                error in
-                if let error = error {
+                    response,
+                    error in
+                if let error {
                     continuation.resume(with: .failure(error))
                 } else {
-                    guard let data = data else {
+                    guard let data else {
                         assertionFailure()
                         continuation.resume(
                             with: .failure(NSError(domain: "error", code: 500, userInfo: nil))
@@ -72,7 +71,7 @@ final class StubAPIService: ApiService, StubInjection {
                             do {
                                 let json = try decoder.decode(Request.Response.self, from: data)
                                 continuation.resume(with: .success(json))
-                            } catch let error {
+                            } catch {
                                 continuation.resume(with: .failure(error))
                             }
                         default:
@@ -80,7 +79,7 @@ final class StubAPIService: ApiService, StubInjection {
                                 let error = try decoder.decode(ApiErrorResponse.self, from: data)
                                 let e = APIServiceError.responseError(error)
                                 continuation.resume(with: .failure(e))
-                            } catch let error {
+                            } catch {
                                 continuation.resume(with: .failure(error))
                             }
                         }
@@ -92,14 +91,13 @@ final class StubAPIService: ApiService, StubInjection {
     }
 
     func call<Request>(from request: Request, maxRetries: Int, retryDelay: UInt64) async throws
-        -> Request.Response where Request: Infra.ApiRequest
-    {
+        -> Request.Response where Request: Infra.ApiRequest {
         var errorResponse: Error?
         for _ in 0..<maxRetries {
             do {
                 return try await call(from: request)
 
-            } catch let error {
+            } catch {
                 errorResponse = error
                 // エラーコードが返ってきているときはリトライしない
                 if error.primaryError?.code != nil {
@@ -117,4 +115,3 @@ final class StubAPIService: ApiService, StubInjection {
         throw errorResponse ?? ApiError(code: 101, message: "APIクライアントのretry処理で不明なエラーが発生しました。")
     }
 }
-

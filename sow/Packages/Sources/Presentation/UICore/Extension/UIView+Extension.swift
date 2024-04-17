@@ -1,7 +1,6 @@
 import UIKit
 
 extension UIView {
-
     /// `constrainSubview`などコードレイアウト系の関数の引数で使用されている。
     /// 主にセーフエリアに対する制約にするかどうかの指定に用いられる。
     public enum Edge {
@@ -36,9 +35,8 @@ extension UIView {
             view.trailingAnchor.constraint(
                 equalTo: edges.contains(.trailing) ? safeAreaLayoutGuide.trailingAnchor : trailingAnchor,
                 constant: -trailing
-            ),
+            )
         ])
-
     }
 
     /// subviewを四隅に貼り付ける。
@@ -63,18 +61,17 @@ extension UIView {
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
 
-        if let width = width {
+        if let width {
             v.widthAnchor.constraint(equalToConstant: width).isActive = true
         }
 
-        if let height = height {
+        if let height {
             v.heightAnchor.constraint(equalToConstant: height).isActive = true
         }
 
         v.backgroundColor = color
         return v
     }
-
 }
 
 extension NSLayoutConstraint {
@@ -87,7 +84,6 @@ extension NSLayoutConstraint {
 public enum UI {}
 
 extension UI {
-
     public static func label(
         _ size: CGFloat,
         text: String? = nil,
@@ -116,4 +112,3 @@ extension Sow where Base: UIColor {
 extension Sow where Base: UIImage {
     // public static var iconFooBar: UIImage { .init(named: "iconFooBar")! }
 }
-

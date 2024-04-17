@@ -12,7 +12,7 @@ private extension PackageDescription.Target.Dependency {
     static let sdWebImage: Self = .product(name: "SDWebImage", package: "SDWebImage")
     static let realm: Self = .product(name: "Realm", package: "realm-swift")
     static let realmSwift: Self = .product(name: "RealmSwift", package: "realm-swift")
-    //static let firebase: Self = .product(name: "Firebase", package: "firebase-ios-sdk")
+    // static let firebase: Self = .product(name: "Firebase", package: "firebase-ios-sdk")
     static let firebaseFirestore: Self = .product(name: "FirebaseFirestore", package: "firebase-ios-sdk")
 
     // local module
@@ -28,7 +28,7 @@ let package = Package(
         .library(
             name: "PresentationLib",
             targets: ["Presentation"]
-        ),
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/Quick/Nimble.git", exact: "13.2.1"),
@@ -36,14 +36,14 @@ let package = Package(
         .package(url: "https://github.com/realm/realm-swift.git", exact: "10.49.1"),
         .package(url: "https://github.com/apple/swift-algorithms.git", exact: "1.2.0"),
         .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI.git", exact: "3.0.1"),
-        .package(url: "https://github.com/firebase/firebase-ios-sdk", exact: "10.24.0"),
+        .package(url: "https://github.com/firebase/firebase-ios-sdk", exact: "10.24.0")
     ],
     targets: [
         .target(
             name: "Core",
             dependencies: [
                 .realm,
-                .realmSwift,
+                .realmSwift
             ]
         ),
         .target(
@@ -51,7 +51,7 @@ let package = Package(
             dependencies: [
                 .core,
                 .realm,
-                .realmSwift,
+                .realmSwift
             ]
         ),
         .target(
@@ -60,10 +60,10 @@ let package = Package(
                 .infra,
                 .algorithms,
                 .sdWebImageSwiftUI,
-                //.firebase,
+                // .firebase,
                 .firebaseFirestore,
                 .realmSwift,
-                .realm,
+                .realm
             ],
             resources: [.process("UICore/Resources")]
         ),
@@ -72,7 +72,7 @@ let package = Package(
             dependencies: [
                 .core,
                 .nimble,
-                .quick,
+                .quick
             ]
         ),
         .testTarget(
@@ -80,7 +80,7 @@ let package = Package(
             dependencies: [
                 .infra,
                 .nimble,
-                .quick,
+                .quick
             ]
         ),
         .testTarget(
@@ -88,11 +88,8 @@ let package = Package(
             dependencies: [
                 .presentation,
                 .nimble,
-                .quick,
+                .quick
             ]
         )
     ]
 )
-
-
-

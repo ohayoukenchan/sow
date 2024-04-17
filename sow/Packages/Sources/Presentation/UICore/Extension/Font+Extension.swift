@@ -1,3 +1,3 @@
 import SwiftUI
 
-extension Font { }
+extension Font {}

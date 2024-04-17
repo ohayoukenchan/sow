@@ -1,7 +1,6 @@
 import XCTest
 
 final class wonderUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
