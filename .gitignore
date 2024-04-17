@@ -14,3 +14,7 @@ DerivedData/
 *.ipa
 *.dSYM.zip
 *.dSYM
+
+## BuildTools
+BuildTools/.build
+BuildTools/.swiftpm

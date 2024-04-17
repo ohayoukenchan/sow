@@ -26,7 +26,6 @@ extension ApiRequest {
     public var basicAuth: String? { nil }
 
     public func buildRequest() -> URLRequest {
-
         let pathURL = baseURL.appendingPathComponent(self.path)
 
         let httpMethod = self.method
@@ -44,13 +43,13 @@ extension ApiRequest {
         var request = URLRequest(url: urlComponents.url!)
         request.httpMethod = httpMethod.rawValue
 
-        if let headerFields = headerFields {
-            headerFields.forEach { key, value in
+        if let headerFields {
+            for (key, value) in headerFields {
                 request.addValue(value, forHTTPHeaderField: key)
             }
         }
 
-        if let bodyParameters = bodyParameters {
+        if let bodyParameters {
             let jsonData = try? JSONSerialization.data(
                 withJSONObject: bodyParameters,
                 options: .prettyPrinted

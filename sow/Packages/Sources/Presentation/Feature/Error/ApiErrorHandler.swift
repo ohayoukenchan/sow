@@ -1,6 +1,6 @@
 import Foundation
-import UIKit
 import Infra
+import UIKit
 
 /// 👷‍♀UIKitの関心なのでFeatureなどに移す
 final class ApiErrorHandler {

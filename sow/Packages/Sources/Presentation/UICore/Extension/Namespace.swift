@@ -19,16 +19,16 @@ public protocol SowCompatible {
 extension SowCompatible {
     public static var sow: Sow<Self>.Type {
         get {
-            return Sow<Self>.self
+            Sow<Self>.self
         }
-        set { }
+        set {}
     }
 
     public var sow: Sow<Self> {
         get {
-            return Sow(self)
+            Sow(self)
         }
-        set { }
+        set {}
     }
 }
 

@@ -2,7 +2,7 @@ import Foundation
 
 public protocol ApiService: Sendable {
     func call<Request>(from request: Request) async throws -> Request.Response
-    where Request: ApiRequest
+        where Request: ApiRequest
 
     func call<Request>(from request: Request, maxRetries: Int, retryDelay: UInt64)
         async throws
@@ -10,22 +10,21 @@ public protocol ApiService: Sendable {
 }
 
 public final class DefaultApiService: ApiService {
-
     public init() {}
 
     public func call<Request>(from request: Request) async throws -> Request.Response
-    where Request: ApiRequest {
+        where Request: ApiRequest {
         let urlRequest: URLRequest = request.buildRequest()
 
         return try await withCheckedThrowingContinuation { continuation in
             let task = URLSession.shared.dataTask(with: urlRequest) {
                 data,
-                response,
-                error in
-                if let error = error {
+                    response,
+                    error in
+                if let error {
                     continuation.resume(with: .failure(error))
                 } else {
-                    guard let data = data else {
+                    guard let data else {
                         assertionFailure()
                         continuation.resume(
                             with: .failure(NSError(domain: "error", code: 500, userInfo: nil))
@@ -42,7 +41,7 @@ public final class DefaultApiService: ApiService {
                             do {
                                 let json = try decoder.decode(Request.Response.self, from: data)
                                 continuation.resume(with: .success(json))
-                            } catch let error {
+                            } catch {
                                 continuation.resume(with: .failure(error))
                             }
                         default:
@@ -51,7 +50,7 @@ public final class DefaultApiService: ApiService {
                                 continuation.resume(
                                     with: .failure(APIServiceError.responseError(error))
                                 )
-                            } catch let error {
+                            } catch {
                                 continuation.resume(with: .failure(error))
                             }
                         }
@@ -65,13 +64,13 @@ public final class DefaultApiService: ApiService {
     public func call<Request>(from request: Request, maxRetries: Int, retryDelay: UInt64 = 3)
         async throws
         -> Request.Response
-    where Request: ApiRequest {
+        where Request: ApiRequest {
         var errorResponse: Error?
         for _ in 0..<maxRetries {
             do {
                 return try await call(from: request)
 
-            } catch let error {
+            } catch {
                 errorResponse = error
                 // エラーコードが返ってきているときはリトライしない
                 if error.primaryError?.code != nil {
