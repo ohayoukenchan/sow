@@ -1,13 +1,21 @@
 import FirebaseCore
+import Presentation
 import SwiftUI
 
 @main
-struct wonderApp: App {
+struct sowApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
+    // TODO: あとでUserの情報をちゃんと取得する
+    let isAuthenticated = false
+
+    let viewBuilder = DependencyBuilder.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RouterContainer(content: {
+                viewBuilder.build(screenType: .signup)
+            }, navigation: isAuthenticated ? .constant([]) : .constant([]))
         }
     }
 }

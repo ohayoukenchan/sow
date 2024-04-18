@@ -189,6 +189,8 @@
 				094EA8502BC6AAD3006B0942 /* Sources */,
 				094EA8512BC6AAD3006B0942 /* Frameworks */,
 				094EA8522BC6AAD3006B0942 /* Resources */,
+				098702112BD0F240003F6292 /* Swiftformat */,
+				098702122BD0F25D003F6292 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -381,6 +383,42 @@
 			shellPath = /bin/sh;
 			shellScript = "cd BuildTools\nSDKROOT=macosx\n\n# Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\n# swift package update\ncp $SRCROOT/.swiftlint.yml ./\nswift run -c release swiftlint\nrm .swiftlint.yml\n";
 		};
+		098702112BD0F240003F6292 /* Swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftformat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\n#swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nswift run -c release swiftformat \"$SRCROOT\"\n";
+		};
+		098702122BD0F25D003F6292 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd BuildTools\nSDKROOT=macosx\n\n# Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\n# swift package update\ncp $SRCROOT/.swiftlint.yml ./\nswift run -c release swiftlint\nrm .swiftlint.yml\n\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -564,6 +602,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"sow/Preview Content\"";
 				DEVELOPMENT_TEAM = L248HZDU6R;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -593,6 +632,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"sow/Preview Content\"";
 				DEVELOPMENT_TEAM = L248HZDU6R;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
