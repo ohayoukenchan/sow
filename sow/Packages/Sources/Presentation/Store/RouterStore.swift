@@ -1,11 +1,18 @@
 import SwiftUI
 
 public enum CurrentScene: String {
-    case signup
+    case signUp
+    case memo
+    case setting
+    case home
 }
 
 public enum NavigationDestination {
-    case signup
+    case signUp
+    case logIn
+    case logOut
+    case welcome
+    case home
 }
 
 extension NavigationDestination: Hashable {
@@ -23,28 +30,51 @@ extension NavigationDestination: Hashable {
 }
 
 @MainActor
-final class RouterStore {
-    @Published private(set) var currentScene: CurrentScene = .signup
-    @Published private(set) var signupPath: [NavigationDestination] = []
+public final class RouterStore {
+    public static let shared: RouterStore = .init()
+
+    @Published private(set) var currentScene: CurrentScene = .signUp
+    @Published private(set) var signUpPath = NavigationPath()
+    @Published private(set) var settingPath = NavigationPath()
+    @Published private(set) var homePath = NavigationPath()
+    @Published private(set) var memoPath = NavigationPath()
 
     func append(destination: NavigationDestination) {
         switch self.currentScene {
-        case .signup:
-            self.signupPath.append(destination)
+        case .signUp:
+            self.signUpPath.append(destination)
+        case .home:
+            self.homePath.append(destination)
+        case .memo:
+            self.memoPath.append(destination)
+        case .setting:
+            self.settingPath.append(destination)
         }
     }
 
     func popToRoot(of scene: CurrentScene) {
         switch scene {
-        case .signup:
-            self.signupPath.removeAll()
+        case .signUp:
+            self.signUpPath = NavigationPath()
+        case .memo:
+            self.memoPath = NavigationPath()
+        case .setting:
+            self.settingPath = NavigationPath()
+        case .home:
+            self.homePath = NavigationPath()
         }
     }
 
     func pop(of scene: CurrentScene) {
         switch scene {
-        case .signup:
-            self.signupPath.removeLast()
+        case .signUp:
+            self.signUpPath.removeLast()
+        case .home:
+            self.homePath.removeLast()
+        case .setting:
+            self.settingPath.removeLast()
+        case .memo:
+            self.memoPath.removeLast()
         }
     }
 
@@ -57,6 +87,9 @@ final class RouterStore {
     }
 
     public func clearAllState() {
-        signupPath.removeAll()
+        signUpPath = NavigationPath()
+        settingPath = NavigationPath()
+        homePath = NavigationPath()
+        memoPath = NavigationPath()
     }
 }

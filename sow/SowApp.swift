@@ -3,19 +3,15 @@ import Presentation
 import SwiftUI
 
 @main
-struct sowApp: App {
+struct SowApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
-    // TODO: あとでUserの情報をちゃんと取得する
-    let isAuthenticated = false
-
-    let viewBuilder = DependencyBuilder.shared
+    var appRouterState = AppRouterState()
 
     var body: some Scene {
         WindowGroup {
-            RouterContainer(content: {
-                viewBuilder.build(screenType: .signup)
-            }, navigation: isAuthenticated ? .constant([]) : .constant([]))
+            AppRootContainer()
+                .environmentObject(appRouterState)
         }
     }
 }

@@ -1,56 +1,43 @@
 import FirebaseAuth
 
 public class AuthUserRepositoryImpl: AuthUserRepository {
-    public init() {
-        observeAuthChanges()
-    }
+    private var handler: AuthStateDidChangeListenerHandle?
+
+    public init() {}
 
     // ログインするメソッド
-    public func signIn(email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
-            DispatchQueue.main.async {
-                if result != nil, error == nil {
-                    // self?.isAuthenticated = true
-                }
-            }
+    public func signIn(email: String, password: String) async throws {
+        do {
+            try await Auth.auth().signIn(withEmail: email, password: password)
+        } catch {
+            throw error
         }
     }
 
     // 新規登録するメソッド
-    public func signUp(email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
-            DispatchQueue.main.async {
-                if result != nil, error == nil {
-                    // self?.isAuthenticated = true
-                }
-            }
+    public func signUp(email: String, password: String) async throws {
+        do {
+            try await Auth.auth().createUser(withEmail: email, password: password)
+        } catch {
+            throw error
         }
     }
 
     // パスワードをリセットするメソッド
-    public func resetPassword(email: String) {
-        Auth.auth().sendPasswordReset(withEmail: email) { error in
-            if let error {
-                print("Error in sending password reset: \(error)")
-            }
+    public func resetPassword(email: String) async throws {
+        do {
+            try await Auth.auth().sendPasswordReset(withEmail: email)
+        } catch {
+            throw error
         }
     }
 
     // ログアウトするメソッド
-    public func signOut() {
+    public func signOut() throws {
         do {
             try Auth.auth().signOut()
-            // isAuthenticated = false
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
-        }
-    }
-
-    private func observeAuthChanges() {
-        Auth.auth().addStateDidChangeListener { [weak self] _, user in
-            DispatchQueue.main.async {
-                // self?.isAuthenticated = user != nil
-            }
         }
     }
 }

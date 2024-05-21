@@ -7,33 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		094EA8582BC6AAD3006B0942 /* sowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8572BC6AAD3006B0942 /* sowApp.swift */; };
-		094EA85A2BC6AAD3006B0942 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8592BC6AAD3006B0942 /* ContentView.swift */; };
+		094EA8582BC6AAD3006B0942 /* SowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8572BC6AAD3006B0942 /* SowApp.swift */; };
 		094EA85C2BC6AAD5006B0942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094EA85B2BC6AAD5006B0942 /* Assets.xcassets */; };
 		094EA85F2BC6AAD5006B0942 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094EA85E2BC6AAD5006B0942 /* Preview Assets.xcassets */; };
-		094EA8692BC6AAD5006B0942 /* sowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8682BC6AAD5006B0942 /* sowTests.swift */; };
-		094EA8732BC6AAD5006B0942 /* sowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8722BC6AAD5006B0942 /* sowUITests.swift */; };
-		094EA8752BC6AAD5006B0942 /* sowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8742BC6AAD5006B0942 /* sowUITestsLaunchTests.swift */; };
 		099CDAB32BC7852300CB1FAC /* PresentationLib in Frameworks */ = {isa = PBXBuildFile; productRef = 099CDAB22BC7852300CB1FAC /* PresentationLib */; };
-		099CDAB52BC7867300CB1FAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099CDAB42BC7867300CB1FAC /* GoogleService-Info.plist */; };
-		099CDAB92BC787A700CB1FAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8592BC6AAD3006B0942 /* ContentView.swift */; };
-		099CDABA2BC787A700CB1FAC /* sowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8572BC6AAD3006B0942 /* sowApp.swift */; };
+		099CDABA2BC787A700CB1FAC /* SowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EA8572BC6AAD3006B0942 /* SowApp.swift */; };
 		099CDABC2BC787A700CB1FAC /* PresentationLib in Frameworks */ = {isa = PBXBuildFile; productRef = 099CDAB72BC787A700CB1FAC /* PresentationLib */; };
 		099CDABE2BC787A700CB1FAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094EA85E2BC6AAD5006B0942 /* Preview Assets.xcassets */; };
 		099CDABF2BC787A700CB1FAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094EA85B2BC6AAD5006B0942 /* Assets.xcassets */; };
-		099CDAC02BC787A700CB1FAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099CDAB42BC7867300CB1FAC /* GoogleService-Info.plist */; };
-		099CDAC82BC7890800CB1FAC /* GoogleService-dev.Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099CDAC72BC7890800CB1FAC /* GoogleService-dev.Info.plist */; };
+		09D1CE3D2BD89FBD008F5056 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D1CE3C2BD89FBD008F5056 /* GoogleService-Info.plist */; };
+		09D1CE3E2BD89FC9008F5056 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0978F2832BD897A900793588 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		094EA8652BC6AAD5006B0942 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 094EA84C2BC6AAD3006B0942 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 094EA8532BC6AAD3006B0942;
-			remoteInfo = sow;
-		};
-		094EA86F2BC6AAD5006B0942 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 094EA84C2BC6AAD3006B0942 /* Project object */;
 			proxyType = 1;
@@ -45,19 +32,15 @@
 /* Begin PBXFileReference section */
 		090954022BCFF49B001A713C /* BuildTools */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BuildTools; sourceTree = "<group>"; };
 		094EA8542BC6AAD3006B0942 /* sow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		094EA8572BC6AAD3006B0942 /* sowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sowApp.swift; sourceTree = "<group>"; };
-		094EA8592BC6AAD3006B0942 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		094EA8572BC6AAD3006B0942 /* SowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SowApp.swift; sourceTree = "<group>"; };
 		094EA85B2BC6AAD5006B0942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		094EA85E2BC6AAD5006B0942 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		094EA8642BC6AAD5006B0942 /* sowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		094EA8682BC6AAD5006B0942 /* sowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sowTests.swift; sourceTree = "<group>"; };
-		094EA86E2BC6AAD5006B0942 /* sowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		094EA8722BC6AAD5006B0942 /* sowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sowUITests.swift; sourceTree = "<group>"; };
-		094EA8742BC6AAD5006B0942 /* sowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sowUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0978F2832BD897A900793588 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		09993B812BEB7A14003EE3A1 /* sowTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = sowTestPlan.xctestplan; path = ../sowTestPlan.xctestplan; sourceTree = "<group>"; };
 		099CDAB12BC7816A00CB1FAC /* Packages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Packages; path = sow/Packages; sourceTree = "<group>"; };
-		099CDAB42BC7867300CB1FAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		099CDAC42BC787A700CB1FAC /* sow-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sow-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		099CDAC72BC7890800CB1FAC /* GoogleService-dev.Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-dev.Info.plist"; sourceTree = "<group>"; };
+		09D1CE3C2BD89FBD008F5056 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +53,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		094EA8612BC6AAD5006B0942 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		094EA86B2BC6AAD5006B0942 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -104,11 +80,10 @@
 		094EA84B2BC6AAD3006B0942 = {
 			isa = PBXGroup;
 			children = (
+				09993B812BEB7A14003EE3A1 /* sowTestPlan.xctestplan */,
 				090954022BCFF49B001A713C /* BuildTools */,
 				099CDAB12BC7816A00CB1FAC /* Packages */,
 				094EA8562BC6AAD3006B0942 /* sow */,
-				094EA8672BC6AAD5006B0942 /* sowTests */,
-				094EA8712BC6AAD5006B0942 /* sowUITests */,
 				094EA8552BC6AAD3006B0942 /* Products */,
 				091E02EE2BC76FD7007571C5 /* Frameworks */,
 			);
@@ -119,7 +94,6 @@
 			children = (
 				094EA8542BC6AAD3006B0942 /* sow.app */,
 				094EA8642BC6AAD5006B0942 /* sowTests.xctest */,
-				094EA86E2BC6AAD5006B0942 /* sowUITests.xctest */,
 				099CDAC42BC787A700CB1FAC /* sow-dev.app */,
 			);
 			name = Products;
@@ -128,8 +102,7 @@
 		094EA8562BC6AAD3006B0942 /* sow */ = {
 			isa = PBXGroup;
 			children = (
-				094EA8572BC6AAD3006B0942 /* sowApp.swift */,
-				094EA8592BC6AAD3006B0942 /* ContentView.swift */,
+				094EA8572BC6AAD3006B0942 /* SowApp.swift */,
 				094EA85B2BC6AAD5006B0942 /* Assets.xcassets */,
 				094EA8822BC6B66C006B0942 /* Resources */,
 				094EA85D2BC6AAD5006B0942 /* Preview Content */,
@@ -145,23 +118,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		094EA8672BC6AAD5006B0942 /* sowTests */ = {
-			isa = PBXGroup;
-			children = (
-				094EA8682BC6AAD5006B0942 /* sowTests.swift */,
-			);
-			path = sowTests;
-			sourceTree = "<group>";
-		};
-		094EA8712BC6AAD5006B0942 /* sowUITests */ = {
-			isa = PBXGroup;
-			children = (
-				094EA8722BC6AAD5006B0942 /* sowUITests.swift */,
-				094EA8742BC6AAD5006B0942 /* sowUITestsLaunchTests.swift */,
-			);
-			path = sowUITests;
-			sourceTree = "<group>";
-		};
 		094EA8822BC6B66C006B0942 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,10 +129,26 @@
 		094EA8832BC6B67C006B0942 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
-				099CDAC72BC7890800CB1FAC /* GoogleService-dev.Info.plist */,
-				099CDAB42BC7867300CB1FAC /* GoogleService-Info.plist */,
+				09D1CE402BD8A48E008F5056 /* prd */,
+				09D1CE3F2BD8A475008F5056 /* dev */,
 			);
 			path = Plist;
+			sourceTree = "<group>";
+		};
+		09D1CE3F2BD8A475008F5056 /* dev */ = {
+			isa = PBXGroup;
+			children = (
+				0978F2832BD897A900793588 /* GoogleService-Info.plist */,
+			);
+			path = dev;
+			sourceTree = "<group>";
+		};
+		09D1CE402BD8A48E008F5056 /* prd */ = {
+			isa = PBXGroup;
+			children = (
+				09D1CE3C2BD89FBD008F5056 /* GoogleService-Info.plist */,
+			);
+			path = prd;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,24 +194,6 @@
 			productReference = 094EA8642BC6AAD5006B0942 /* sowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		094EA86D2BC6AAD5006B0942 /* sowUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 094EA87E2BC6AAD5006B0942 /* Build configuration list for PBXNativeTarget "sowUITests" */;
-			buildPhases = (
-				094EA86A2BC6AAD5006B0942 /* Sources */,
-				094EA86B2BC6AAD5006B0942 /* Frameworks */,
-				094EA86C2BC6AAD5006B0942 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				094EA8702BC6AAD5006B0942 /* PBXTargetDependency */,
-			);
-			name = sowUITests;
-			productName = sowUITests;
-			productReference = 094EA86E2BC6AAD5006B0942 /* sowUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		099CDAB62BC787A700CB1FAC /* sow-dev */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 099CDAC12BC787A700CB1FAC /* Build configuration list for PBXNativeTarget "sow-dev" */;
@@ -279,10 +233,6 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 094EA8532BC6AAD3006B0942;
 					};
-					094EA86D2BC6AAD5006B0942 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 094EA8532BC6AAD3006B0942;
-					};
 				};
 			};
 			buildConfigurationList = 094EA84F2BC6AAD3006B0942 /* Build configuration list for PBXProject "sow" */;
@@ -300,7 +250,6 @@
 			targets = (
 				094EA8532BC6AAD3006B0942 /* sow */,
 				094EA8632BC6AAD5006B0942 /* sowTests */,
-				094EA86D2BC6AAD5006B0942 /* sowUITests */,
 				099CDAB62BC787A700CB1FAC /* sow-dev */,
 			);
 		};
@@ -311,21 +260,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				099CDAC82BC7890800CB1FAC /* GoogleService-dev.Info.plist in Resources */,
 				094EA85F2BC6AAD5006B0942 /* Preview Assets.xcassets in Resources */,
+				09D1CE3D2BD89FBD008F5056 /* GoogleService-Info.plist in Resources */,
 				094EA85C2BC6AAD5006B0942 /* Assets.xcassets in Resources */,
-				099CDAB52BC7867300CB1FAC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		094EA8622BC6AAD5006B0942 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		094EA86C2BC6AAD5006B0942 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,8 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				099CDABE2BC787A700CB1FAC /* Preview Assets.xcassets in Resources */,
+				09D1CE3E2BD89FC9008F5056 /* GoogleService-Info.plist in Resources */,
 				099CDABF2BC787A700CB1FAC /* Assets.xcassets in Resources */,
-				099CDAC02BC787A700CB1FAC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,8 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				094EA85A2BC6AAD3006B0942 /* ContentView.swift in Sources */,
-				094EA8582BC6AAD3006B0942 /* sowApp.swift in Sources */,
+				094EA8582BC6AAD3006B0942 /* SowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,16 +375,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				094EA8692BC6AAD5006B0942 /* sowTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		094EA86A2BC6AAD5006B0942 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				094EA8732BC6AAD5006B0942 /* sowUITests.swift in Sources */,
-				094EA8752BC6AAD5006B0942 /* sowUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,8 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				099CDAB92BC787A700CB1FAC /* ContentView.swift in Sources */,
-				099CDABA2BC787A700CB1FAC /* sowApp.swift in Sources */,
+				099CDABA2BC787A700CB1FAC /* SowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,11 +393,6 @@
 			isa = PBXTargetDependency;
 			target = 094EA8532BC6AAD3006B0942 /* sow */;
 			targetProxy = 094EA8652BC6AAD5006B0942 /* PBXContainerItemProxy */;
-		};
-		094EA8702BC6AAD5006B0942 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 094EA8532BC6AAD3006B0942 /* sow */;
-			targetProxy = 094EA86F2BC6AAD5006B0942 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -692,42 +616,6 @@
 			};
 			name = Release;
 		};
-		094EA87F2BC6AAD5006B0942 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L248HZDU6R;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ohayoukenchan.sow.sowUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = sow;
-			};
-			name = Debug;
-		};
-		094EA8802BC6AAD5006B0942 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L248HZDU6R;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ohayoukenchan.sow.sowUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = sow;
-			};
-			name = Release;
-		};
 		099CDAC22BC787A700CB1FAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -814,15 +702,6 @@
 			buildConfigurations = (
 				094EA87C2BC6AAD5006B0942 /* Debug */,
 				094EA87D2BC6AAD5006B0942 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		094EA87E2BC6AAD5006B0942 /* Build configuration list for PBXNativeTarget "sowUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				094EA87F2BC6AAD5006B0942 /* Debug */,
-				094EA8802BC6AAD5006B0942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

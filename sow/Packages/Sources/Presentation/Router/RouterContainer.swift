@@ -1,12 +1,13 @@
 import SwiftUI
 
 public struct RouterContainer<Content>: View where Content: View {
-    @ViewBuilder let content: () -> Content
-    let navigation: Binding<[NavigationDestination]>
+    @ViewBuilder var content: () -> Content
 
-    let viewBuilder = DependencyBuilder.shared
+    var navigation: Binding<NavigationPath>
 
-    public init(content: @escaping () -> Content, navigation: Binding<[NavigationDestination]>) {
+    var viewFactory = ViewFactory.shared
+
+    public init(content: @escaping () -> Content, navigation: Binding<NavigationPath>) {
         self.content = content
         self.navigation = navigation
     }
@@ -15,10 +16,19 @@ public struct RouterContainer<Content>: View where Content: View {
         NavigationStack(path: navigation) {
             VStack {
                 content()
-            }.navigationDestination(for: NavigationDestination.self) { destination in
+            }
+            .navigationDestination(for: NavigationDestination.self) { destination in
                 switch destination {
-                case .signup:
-                    viewBuilder.build(screenType: .signup)
+                case .signUp:
+                    viewFactory.build(screenType: .signUp)
+                case .home:
+                    viewFactory.build(screenType: .home)
+                case .logIn:
+                    viewFactory.build(screenType: .logIn)
+                case .welcome:
+                    viewFactory.build(screenType: .welcome)
+                case .logOut:
+                    viewFactory.build(screenType: .logOut)
                 }
             }
         }

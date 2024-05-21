@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "094EA8532BC6AAD3006B0942"
-               BuildableName = "sow.app"
-               BlueprintName = "sow"
+               BlueprintIdentifier = "099CDAB62BC787A700CB1FAC"
+               BuildableName = "sow-dev.app"
+               BlueprintName = "sow-dev"
                ReferencedContainer = "container:sow.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,9 +48,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "094EA8532BC6AAD3006B0942"
-            BuildableName = "sow.app"
-            BlueprintName = "sow"
+            BlueprintIdentifier = "099CDAB62BC787A700CB1FAC"
+            BuildableName = "sow-dev.app"
+            BlueprintName = "sow-dev"
             ReferencedContainer = "container:sow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -65,9 +65,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "094EA8532BC6AAD3006B0942"
-            BuildableName = "sow.app"
-            BlueprintName = "sow"
+            BlueprintIdentifier = "099CDAB62BC787A700CB1FAC"
+            BuildableName = "sow-dev.app"
+            BlueprintName = "sow-dev"
             ReferencedContainer = "container:sow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
