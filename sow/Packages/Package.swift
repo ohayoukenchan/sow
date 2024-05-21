@@ -14,6 +14,7 @@ private extension PackageDescription.Target.Dependency {
     static let realmSwift: Self = .product(name: "RealmSwift", package: "realm-swift")
     // static let firebase: Self = .product(name: "Firebase", package: "firebase-ios-sdk")
     static let firebaseFirestore: Self = .product(name: "FirebaseFirestore", package: "firebase-ios-sdk")
+    static let firebaseAuth: Self = .product(name: "FirebaseAuth", package: "firebase-ios-sdk")
 
     // local module
     static let core: Self = .target(name: "Core")
@@ -51,7 +52,8 @@ let package = Package(
             dependencies: [
                 .core,
                 .realm,
-                .realmSwift
+                .realmSwift,
+                .firebaseAuth
             ]
         ),
         .target(

@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyBNd9kKgkA57B-qRA80CPakA6qw_nrQzKc</string>
+	<string>AIzaSyCd38bVtjC2nH13q_GfSoqMxkFL7rF8N7A</string>
 	<key>GCM_SENDER_ID</key>
-	<string>678818749306</string>
+	<string>496727508298</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.ohayoukenchan.sow</string>
 	<key>PROJECT_ID</key>
-	<string>wonder-9f5ea</string>
+	<string>sow-prd</string>
 	<key>STORAGE_BUCKET</key>
-	<string>wonder-9f5ea.appspot.com</string>
+	<string>sow-prd.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:678818749306:ios:ceebc51f8f5137392ad4c3</string>
+	<string>1:496727508298:ios:39de6198fff6ad5aa1edb3</string>
 </dict>
 </plist>

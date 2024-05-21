@@ -1,13 +1,17 @@
 import FirebaseCore
+import Presentation
 import SwiftUI
 
 @main
-struct wonderApp: App {
+struct SowApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
+    var appRouterState = AppRouterState()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppRootContainer()
+                .environmentObject(appRouterState)
         }
     }
 }
