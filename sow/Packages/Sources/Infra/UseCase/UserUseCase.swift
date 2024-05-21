@@ -1,13 +1,13 @@
 import Core
 
-final class UserUseCase {
+public final class UserUseCase {
     private let userRepository: UserRepository
 
-    init(userRepository: UserRepository) {
+    public init(userRepository: UserRepository) {
         self.userRepository = userRepository
     }
 
-    func fetchUser() -> User {
+    public func fetchUser() -> User {
         userRepository.fetchUser()
     }
 }

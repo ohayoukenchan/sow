@@ -16,11 +16,17 @@ public final class ViewFactory {
             let useCase = AuthUserUseCase(authRepository: repository)
             let presenter = AuthPresenter(useCase: useCase)
 
-            let signUpState = SignUpViewState(presenter: presenter)
+            let viewState = SignUpViewState(presenter: presenter)
 
-            return AnyView(SignUpViewContainer(viewState: signUpState))
+            return AnyView(SignUpViewContainer(viewState: viewState))
         case .home:
-            return AnyView(HomeViewContainer())
+            let repository = UserRepositoryImpl()
+            let useCase = UserUseCase(userRepository: repository)
+            let presenter = UserPresenter(useCase: useCase)
+
+            let viewState = HomeViewState(presenter: presenter)
+
+            return AnyView(HomeViewContainer(viewState: viewState))
         case .logIn:
             let repository = AuthUserRepositoryImpl()
             let useCase = AuthUserUseCase(authRepository: repository)

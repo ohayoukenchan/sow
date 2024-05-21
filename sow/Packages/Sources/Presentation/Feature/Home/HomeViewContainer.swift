@@ -10,6 +10,8 @@ import SwiftUI
 public struct HomeViewContainer: View {
     @EnvironmentObject var appRouterState: AppRouterState
 
+    @ObservedObject var viewState: HomeViewState
+
     @State var selection = 1
 
     var viewFactory = ViewFactory.shared
@@ -17,7 +19,7 @@ public struct HomeViewContainer: View {
     public var body: some View {
         TabView(selection: $selection) {
             RouterContainer(content: {
-                Test1ViewContainer()
+                Test1ViewContainer(name: viewState.user?.name)
             }, navigation: $appRouterState.homePath)
                 .tabItem {
                     Label("Page1", systemImage: "1.circle")
@@ -44,6 +46,7 @@ public struct HomeViewContainer: View {
         }
         .onAppear {
             appRouterState.dispatch(.changeScene(nextScene: .home))
+            viewState.dispatch(.fetchUser)
         }
         .onChange(of: selection, perform: { newValue in
             switch selection {
@@ -58,9 +61,4 @@ public struct HomeViewContainer: View {
             }
         })
     }
-}
-
-#Preview {
-    HomeViewContainer()
-        .environmentObject(AppRouterState())
 }
