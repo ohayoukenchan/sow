@@ -9,6 +9,7 @@ public enum HomeViewAction {
 @MainActor
 public final class HomeViewState: ObservableObject {
     @Published public var user: User? = nil
+    @Published private(set) var uid: String? = nil
 
     private let presenter: UserPresenter?
 
@@ -18,6 +19,7 @@ public final class HomeViewState: ObservableObject {
         self.presenter = presenter
 
         UserStore.shared.$user.assign(to: &$user)
+        AuthUserStore.shared.$uid.assign(to: &$uid)
     }
 
     public func dispatch(_ action: HomeViewAction) {
@@ -28,7 +30,9 @@ public final class HomeViewState: ObservableObject {
     }
 
     private func fetchUser() {
-        let user = presenter?.fetchUser()
+        guard let uid else { return }
+
+        let user = presenter?.fetchUser(uid: uid)
 
         guard let user else { return }
 

@@ -7,7 +7,11 @@ public final class UserUseCase {
         self.userRepository = userRepository
     }
 
-    public func fetchUser() -> User {
-        userRepository.fetchUser()
+    public func fetchUser(uid: String) -> User {
+        userRepository.fetchUser(uid: uid)
+    }
+
+    public func createUser(uid: String, user: User) {
+        userRepository.createUser(uid: uid, user: user)
     }
 }

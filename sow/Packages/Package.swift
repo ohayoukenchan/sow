@@ -12,7 +12,7 @@ private extension PackageDescription.Target.Dependency {
     static let sdWebImage: Self = .product(name: "SDWebImage", package: "SDWebImage")
     static let realm: Self = .product(name: "Realm", package: "realm-swift")
     static let realmSwift: Self = .product(name: "RealmSwift", package: "realm-swift")
-    // static let firebase: Self = .product(name: "Firebase", package: "firebase-ios-sdk")
+//
     static let firebaseFirestore: Self = .product(name: "FirebaseFirestore", package: "firebase-ios-sdk")
     static let firebaseAuth: Self = .product(name: "FirebaseAuth", package: "firebase-ios-sdk")
 
@@ -24,7 +24,7 @@ private extension PackageDescription.Target.Dependency {
 
 let package = Package(
     name: "Packages",
-    platforms: [.iOS("16.0")],
+    platforms: [.iOS(.v17)],
     products: [
         .library(
             name: "PresentationLib",
@@ -53,7 +53,8 @@ let package = Package(
                 .core,
                 .realm,
                 .realmSwift,
-                .firebaseAuth
+                .firebaseAuth,
+                .firebaseFirestore
             ]
         ),
         .target(
@@ -62,7 +63,6 @@ let package = Package(
                 .infra,
                 .algorithms,
                 .sdWebImageSwiftUI,
-                // .firebase,
                 .firebaseFirestore,
                 .realmSwift,
                 .realm

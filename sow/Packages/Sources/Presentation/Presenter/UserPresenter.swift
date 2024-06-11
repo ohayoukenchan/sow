@@ -12,7 +12,7 @@ public final class UserPresenter {
         false
     }
 
-    public func fetchUser() -> User {
-        useCase.fetchUser()
+    public func fetchUser(uid: String) -> User {
+        useCase.fetchUser(uid: uid)
     }
 }
